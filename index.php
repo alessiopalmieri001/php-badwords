@@ -12,12 +12,12 @@
         <div>
             <form action="./about.php" method="GET">
                 <div>
-                    <textarea name="paragrafo" id="" cols="30" rows="10">
+                    <textarea name="paragrafo" id="" placeholder="inserisci qui il paragrafo">
                             
                     </textarea>
                 </div>
                 <div>
-                    <input type="text" name="censure" value="lorem">
+                    <input type="text" name="censure" value="lorem" placeholder="inserisci qui la parola da censurare">
                 </div>
                 <div>
                     <button>

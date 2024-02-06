@@ -1,8 +1,8 @@
 <?php 
 
-$paragrafo = $_GET['paragrafo']
-
-
+$paragrafo = $_GET['paragrafo'];
+$censura = $_GET['censure'];
+$censuraParagrafo = str_replace($censura, '***', $paragrafo);
 
 ?>
 
@@ -16,8 +16,38 @@ $paragrafo = $_GET['paragrafo']
         <title>Document</title>
     </head>
     <body>
+        <h2>
+            paragrafo
+        </h2>
         <p>
-            <?php echo  $paragrafo   ?>
+            <?php
+                echo  $paragrafo;
+                echo '"Lunghezza della stringa: '.strlen($paragrafo).'"';
+            ?>
         </p>
+        <h2>
+            parolada censurare:
+        </h2>
+        <span>
+            <?php echo  $censura   ?>
+        </span>
+        <section>
+            <hr>
+            <h2>
+                paragrafo censurato
+            </h2>
+            <p>
+                <?php 
+                    echo $censuraParagrafo;
+                    
+                ?>
+            </p>
+            <p>
+                <?php 
+                    echo strlen($censuraParagrafo);
+                    
+                ?>
+            </p>
+        </section>
     </body>
 </html>
